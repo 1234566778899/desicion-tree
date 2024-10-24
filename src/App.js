@@ -1,20 +1,16 @@
-import { Route, Routes } from 'react-router-dom';
-import './App.css';
-import HomeApp from './components/home';
-import Smart from './components/smart';
-
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomeApp from './components/HomeApp';
+import Smart from './components/Smart';
+import './styles/App.css';
 
 function App() {
   return (
-    <>
-      {/* <NavbarComponent /> */}
-      <Routes>
-        <Route exact path='/' element={<HomeApp />} />
-        <Route path='/smart' element={<Smart />} />
-        {/* Agrega la ruta para Smart */}
-        {/* Otras rutas comentadas pueden ir aquí */}
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={<HomeApp />} />
+      <Route path="/smart" element={<Smart />} />
+    </Routes>
+
   );
 }
 

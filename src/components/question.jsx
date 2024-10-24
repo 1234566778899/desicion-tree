@@ -4,9 +4,9 @@ import React from 'react';
 
 const Question = ({ question, options, onSelectOption }) => {
   return (
-    <div className="container">
+    <div className="question-container">
       <h3>{question}</h3>
-      <div>
+      <div className="options-container">
         {options.map((option, index) => (
           <button key={index} onClick={() => onSelectOption(option)}>
             {option.label}

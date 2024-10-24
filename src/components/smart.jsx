@@ -1,16 +1,23 @@
 // src/components/Smart.js
 
 import React from 'react';
-import '../styles/smart.css';
-import DecisionTree from './decisiontree';
+import '../styles/Smart.css'; // Asegúrate de que el nombre coincide
+import DecisionTree from './DecisionTree';
+import {
+  analysisQuestions,
+  designQuestions,
+  implementationQuestions,
+  verificationQuestions,
+  maintenanceQuestions,
+} from '../questionsSections'; // Importa todas las preguntas
 
-export const Smart = () => {
+const Smart = () => {
   const sections = [
-    { name: 'ANÁLISIS', color: '#A4C8E1' },
-    { name: 'DISEÑO', color: '#7FA1C7' },
-    { name: 'IMPLEMENTACIÓN', color: '#4B8BD6' },
-    { name: 'VERIFICACIÓN', color: '#007BFF' },
-    { name: 'MANTENIMIENTO', color: '#0056B3' },
+    { name: 'ANÁLISIS', color: '#A4C8E1', questions: analysisQuestions },
+    { name: 'DISEÑO', color: '#7FA1C7', questions: designQuestions },
+    { name: 'IMPLEMENTACIÓN', color: '#4B8BD6', questions: implementationQuestions },
+    { name: 'VERIFICACIÓN', color: '#007BFF', questions: verificationQuestions },
+    { name: 'MANTENIMIENTO', color: '#0056B3', questions: maintenanceQuestions },
   ];
 
   return (
@@ -23,7 +30,7 @@ export const Smart = () => {
         >
           <div className="section-name">{section.name}</div>
           <div className="decision-tree-container">
-            <DecisionTree />
+            <DecisionTree questions={section.questions} />
           </div>
         </div>
       ))}
