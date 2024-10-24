@@ -1,0 +1,48 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Asegúrate de que el body ocupe el 100% de altura */
+  }
+  
+  .smart-container {
+    display: flex;
+    width: 100vw; /* Toma el 100% del ancho de la ventana */
+    height: 100vh; /* Toma el 100% de la altura de la ventana */
+  }
+  
+  .section {
+    flex: 1; /* Cada sección toma el mismo ancho */
+    padding: 20px;
+    margin: 10px; /* Espacio entre secciones */
+    border-radius: 5px;
+    display: flex; /* Alinea contenido dentro de la sección */
+    flex-direction: column; /* Organiza el contenido en una columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    cursor: default; /* Cambia el cursor a default para que no parezca clickeable */
+    transition: background-color 0.3s;
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    height: calc(100vh - 20px); /* Ajusta la altura para considerar el margen */
+    overflow: hidden; /* Evita que los elementos desborden */
+    text-align: center; /* Alinea el texto al centro */
+  }
+  
+  .section-name {
+    font-size: 1.5rem; /* Aumenta el tamaño de la fuente */
+    color: white; /* Color blanco para el texto */
+    font-weight: bold; /* Hace que el texto sea negrita */
+    margin-bottom: 10px; /* Espacio entre el nombre y el árbol de decisiones */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+    text-overflow: ellipsis; /* Muestra "..." si el texto es demasiado largo */
+  }
+  
+  .decision-tree-container {
+    margin-top: 10px; /* Espacio entre el nombre de la sección y el árbol de decisiones */
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente para el árbol */
+    border-radius: 5px;
+    width: 100%; /* Asegúrate de que el contenedor del árbol de decisiones ocupe el ancho completo */
+    height: auto; /* Permite que la altura se ajuste según el contenido */
+  }
+  
